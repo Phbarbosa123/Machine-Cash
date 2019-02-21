@@ -16,8 +16,8 @@ int main()
     printf("Digite o valor que deseja sacar: ");
     scanf("%f", &valor);
 
-    if((int)valor %100!=0 && (int)valor %50!=0 && (int)valor %20!=0 && (int)valor %10!=0){
-        printf("Erro de notas indisponiveis");
+    if(valor == NULL){
+        printf("Erro de valor nulo");
         return 0;
     }
 
@@ -25,12 +25,10 @@ int main()
         printf("Erro de valor invalido");
         return 0;
     }
-
-    if(valor == NULL){
-        printf("Erro de valor nulo");
+    if((int)valor %100!=0 && (int)valor %50!=0 && (int)valor %20!=0 && (int)valor %10!=0 || valor - floor(valor) > 0 && valor - floor(valor) < 1){
+        printf("Erro de notas indisponiveis");
         return 0;
     }
-
 
     qtdNotasCem = floor(valor/100);
     valor = (int)valor%100;
