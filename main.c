@@ -8,12 +8,11 @@ int main()
     int qtdNotasCem, qtdNotasCinquenta, qtdNotasVinte, qtdNotasDez, i, saque, resto;
     float valor;
     float notasDisp[4] = {100.00,50.00,20.00,10.00};
-    printf("Notas Disponiveis\n");
+    printf("Notas Disponiveis: ");
     for(i = 0; i<=3; i++) {
-        printf("%d", i);
-        printf("Notas Disponiveis[%d] = %.1f\n",i,notasDisp[i]);
+        printf("%.2f ",notasDisp[i]);
     }
-    printf("Digite o valor que deseja sacar: ");
+    printf("\nDigite o valor que deseja sacar: ");
     scanf("%f", &valor);
 
     if(valor == NULL){
@@ -46,9 +45,9 @@ int main()
     for(int i = 0; i < qtdNotasCem; i++) {
 
         if(i+1 >= qtdNotasCem  && qtdNotasCinquenta <= 0 && qtdNotasVinte <= 0 &&  qtdNotasDez <= 0){
-            printf("100");
+            printf("100.00");
         } else {
-            printf("100, ");
+            printf("100.00, ");
         }
 
     }
@@ -56,25 +55,25 @@ int main()
     for(int i = 0; i < qtdNotasCinquenta; i++) {
 
         if(i+1 >= qtdNotasCinquenta && qtdNotasVinte <= 0 &&  qtdNotasDez <= 0){
-            printf("50");
+            printf("50.00");
         } else {
-            printf("50, ");
+            printf("50.00, ");
         }
     }
     for(int i = 0; i < qtdNotasVinte; i++) {
 
         if(i+1 >= qtdNotasVinte &&  qtdNotasDez <= 0 ) {
-            printf("20");
+            printf("20.00");
         } else {
-            printf("20, ");
+            printf("20.00, ");
         }
     }
     for(int i = 0; i < qtdNotasDez; i++) {
 
         if(i+1 >= qtdNotasDez ) {
-            printf("10");
+            printf("10.00");
         } else {
-            printf("10, ");
+            printf("10.00, ");
         }
     }
     printf("]");
